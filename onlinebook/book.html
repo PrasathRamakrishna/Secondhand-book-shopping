@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>onlinebookshop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    
+    <link rel="stylesheet" href="book.css" />
+    
+  </head>
+  <body>
+    <nav style="z-index: 999;" class="nav">
+      <span>BOOKSTOGRAM</span>
+
+      <ul class="dropdown">
+        <li class="icon2"></li>
+
+        <li>
+          <a href="book.html">home <i class="fa-solid fa-house"></i></a>
+        </li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="sell.html">sell</a></li>
+        <li><a href="feedback.html">feedback</a></li>
+        <li class="icon2">
+          <a href="login.html">login <i class="fa-solid fa-user"></i></a>
+        </li>
+        <li class="icon2">
+          <a href="cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+      </ul>
+
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+      <div class="cart">
+        <a href="cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+      <div class="login">
+        <a href="login.css"><i class="fa-solid fa-user"></i></a>
+      </div>
+    </nav>
+
+    <div id="productsContainer"></div>
+
+    <script src="scripts.js"></script>
+
+    <center>
+      <div class="search">
+        <input
+          type="search"
+          id="search-item"
+          placeholder="  search product..."
+          onkeyup="search()"
+        >
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </center>
+    <h2 class="heading">Top Famous Book</h2>
+    <center>
+      <div class="box" id="box">
+        <fieldset class="product">
+          <div>
+            <div class="b">
+              <button onclick="Toggle()" id="btn">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <img src="images/its end.jpg" alt="" /><br />
+            <small>it's end with us</small><br />
+            <h3>₹150</h3>
+            <div class="star">
+              <i class="fa-solid fa-star"><p>4.2</p></i>
+            </div>
+            <br />
+            <a href="buy.html"><button type="button">Buy</button></a>
+          </div>
+        </fieldset>
+        <fieldset class="product">
+          <div>
+            <div class="b">
+              <button onclick="Toggle2()" id="btn2">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <img src="images/its start.jpg" alt="" /><br />
+            <small>it's start with us</small><br />
+            <h3>₹130</h3>
+            <div class="star">
+              <i class="fa-solid fa-star"><p>4.0</p></i>
+            </div>
+            <br />
+            <a href="buy.html"><button type="button">Buy</button></a>
+          </div>
+        </fieldset>
+
+        <fieldset class="product">
+          <div>
+            <div class="b">
+              <button onclick="Toggle3()" id="btn3">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <img src="images/silent patient.jpg" alt="" /><br />
+            <small>The silent patient</small><br />
+            <h3>₹170</h3>
+            <div class="star">
+              <i class="fa-solid fa-star"><p>3.9</p></i>
+            </div>
+            <br />
+            <a href="buy.html"><button type="button">Buy</button></a>
+          </div>
+        </fieldset>
+        <fieldset class="product">
+          <div>
+            <div class="b">
+              <button onclick="Toggle4()" id="btn4">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <img src="images/alchemist.jpg" alt="" /><br />
+            <small>The alchemist</small><br />
+            <h3>₹100</h3>
+            <div class="star">
+              <i class="fa-solid fa-star"><p>3.5</p></i>
+            </div>
+            <br />
+            <a href="buy.html"><button type="button">Buy</button></a>
+          </div>
+        </fieldset>
+        <fieldset class="product">
+          <div>
+            <div class="b">
+              <button onclick="Toggle5()" id="btn5">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <img src="images/ikigai.jpg" alt="" /><br />
+            <small>Ikigai</small><br />
+            <h3>₹150</h3>
+            <div class="star">
+              <i class="fa-solid fa-star"><p>4.0</p></i>
+            </div>
+            <br />
+            <a href="buy.html"><button type="button">Buy</button></a>
+          </div>
+        </fieldset>
+
+        <fieldset class="product">
+          <div>
+            <div class="b">
+              <button onclick="Toggle6()" id="btn6">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+            </div>
+            <img src="images/dream.jpg" alt="" /><br />
+            <small>your dream career</small><br />
+            <h3>₹200</h3>
+            <div class="star">
+              <i class="fa-solid fa-star"><p>4.6</p></i>
+            </div>
+            <br />
+            <a href="buy.html"><button type="button">Buy</button></a>
+          </div>
+        </fieldset>
+      </div>
+    </center>
+    <div class="sec">
+      <h2 class="heading">Top fiction book</h2>
+      <center>
+        <div class="box">
+          <fieldset class="product">
+            <div>
+              <div class="b">
+                <button onclick="Toggle7()" id="btn7">
+                  <i class="fa-solid fa-heart"></i>
+                </button>
+              </div>
+              <img src="images/dune.jpg" alt="" /><br />
+              <small>Dune</small><br />
+              <h3>₹120</h3>
+              <div class="star">
+                <i class="fa-solid fa-star"><p>4.5</p></i>
+              </div>
+              <br />
+              <a href="buy.html"><button type="button">Buy</button></a>
+            </div>
+          </fieldset>
+
+          <fieldset class="product">
+            <div>
+              <div class="b">
+                <button onclick="Toggle8()" id="btn8">
+                  <i class="fa-solid fa-heart"></i>
+                </button>
+              </div>
+              <img src="images/1984.jpg" alt="" /><br />
+              <small>1984</small><br />
+              <h3>₹490</h3>
+              <div class="star">
+                <i class="fa-solid fa-star"><p>4.1</p></i>
+              </div>
+              <br />
+              <a href="buy.html"><button type="button">Buy</button></a>
+            </div>
+          </fieldset>
+
+          <fieldset class="product">
+            <div>
+              <div class="b">
+                <button onclick="Toggle9()" id="btn9">
+                  <i class="fa-solid fa-heart"></i>
+                </button>
+              </div>
+              <img src="images/the left.jpg" alt="" /><br />
+              <small>The left hand of darkness</small><br />
+              <h3>₹439</h3>
+              <div class="star">
+                <i class="fa-solid fa-star"><p>4.2</p></i>
+              </div>
+              <br />
+              <a href="buy.html"><button type="button">Buy</button></a>
+            </div>
+          </fieldset>
+
+          <fieldset class="product">
+            <div>
+              <div class="b">
+                <button onclick="Toggle10()" id="btn10">
+                  <i class="fa-solid fa-heart"></i>
+                </button>
+              </div>
+              <img src="images/three body.jpg" alt="" /><br />
+              <small>The three body problem</small><br />
+              <h3>₹259</h3>
+              <div class="star">
+                <i class="fa-solid fa-star"><p>3.8</p></i>
+              </div>
+              <br />
+              <a href="buy.html"><button type="button">Buy</button></a>
+            </div>
+          </fieldset>
+          <fieldset class="product">
+            <div>
+              <div class="b">
+                <button onclick="Toggle11()" id="btn11">
+                  <i class="fa-solid fa-heart"></i>
+                </button>
+              </div>
+              <img src="images/ender game.jpg" alt="" /><br />
+              <small>Ender's game</small><br />
+              <h3>₹659</h3>
+              <div class="star">
+                <i class="fa-solid fa-star"><p>4.2</p></i>
+              </div>
+              <br />
+              <a href="buy.html"><button type="button">Buy</button></a>
+            </div>
+          </fieldset>
+          <fieldset class="product">
+            <div>
+              <div class="b">
+                <button onclick="Toggle12()" id="btn12">
+                  <i class="fa-solid fa-heart"></i>
+                </button>
+              </div>
+              <img src="images/hyperion.jpg" alt="" /><br />
+              <small>Hyperion</small><br />
+              <h3>₹199</h3>
+              <div class="star">
+                <i class="fa-solid fa-star"><p>3.7</p></i>
+              </div>
+              <br />
+              <a href="buy.html"><button type="button">Buy</button></a>
+            </div>
+          </fieldset>
+        </div>
+      </center>
+      <div class="third">
+        <h2 class="heading">Mystery book</h2>
+        <center>
+          <div class="box">
+            <fieldset class="product">
+              <div>
+                <div class="b">
+                  <button onclick="Toggle13()" id="btn13">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <img src="images/gone girl.jpg" alt="" /><br />
+                <small>Gone girl</small><br />
+                <h3>₹199</h3>
+                <div class="star">
+                  <i class="fa-solid fa-star"><p>4.4</p></i>
+                </div>
+                <br />
+                <a href="buy.html"><button type="button">Buy</button></a>
+              </div>
+            </fieldset>
+
+            <fieldset class="product">
+              <div>
+                <div class="b">
+                  <button onclick="Toggle14()" id="btn14">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <img src="images/hindu.jpg" alt="" /><br />
+                <small>The hidden hindu</small><br />
+                <h3>₹229</h3>
+                <div class="star">
+                  <i class="fa-solid fa-star"><p>4.7</p></i>
+                </div>
+                <br />
+                <a href="buy.html"><button type="button">Buy</button></a>
+              </div>
+            </fieldset>
+
+            <fieldset class="product">
+              <div>
+                <div class="b">
+                  <button onclick="Toggle15()" id="btn15">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <img src="images/abc.jpg" alt="" /><br />
+                <small>The A.B.C murder</small><br />
+                <h3>₹399</h3>
+                <div class="star">
+                  <i class="fa-solid fa-star"><p>3.4</p></i>
+                </div>
+                <br />
+                <a href="buy.html"><button type="button">Buy</button></a>
+              </div>
+            </fieldset>
+
+            <fieldset class="product">
+              <div>
+                <div class="b">
+                  <button onclick="Toggle16()" id="btn16">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <img src="images/night.jpg" alt="" /><br />
+                <small
+                  >That night: Four Friends. Twenty Years. One Haunting
+                  Secret.</small
+                ><br />
+                <h3>₹499</h3>
+                <div class="star">
+                  <i class="fa-solid fa-star"><p>4.1</p></i>
+                </div>
+                <br />
+                <a href="buy.html"><button type="button">Buy</button></a>
+              </div>
+            </fieldset>
+            <fieldset class="product">
+              <div>
+                <div class="b">
+                  <button onclick="Toggle17()" id="btn17">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <img src="images/thursday.jpg" alt="" /><br />
+                <small>The Thursday murder club</small><br />
+                <h3>₹359</h3>
+                <div class="star">
+                  <i class="fa-solid fa-star"><p>4.5</p></i>
+                </div>
+                <br />
+                <a href="buy.html"><button type="button">Buy</button></a>
+              </div>
+            </fieldset>
+            <fieldset class="product">
+              <div>
+                <div class="b">
+                  <button onclick="Toggle18()" id="btn18">
+                    <i class="fa-solid fa-heart"></i>
+                  </button>
+                </div>
+                <img src="images/guest.jpg" alt="" /><br />
+                <small>The guest list</small><br />
+                <h3>₹389</h3>
+                <div class="star">
+                  <i class="fa-solid fa-star"><p>4.1</p></i>
+                </div>
+                <br />
+                <a href="buy.html"><button type="button">Buy</button></a>
+              </div>
+            </fieldset>
+          </div>
+        </center>
+      </div>
+    </div>
+    <div class="hi1"><h2>selling book</h2></div>
+    <section id="bookDisplay" class="hi">
+      <!-- Books will be dynamically added here by JavaScript -->
+  </section>
+      </div>
+  
+
+    <script src="book1.js"></script>
+  </body>
+</html>
