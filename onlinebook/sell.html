@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell a Book</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the stylesheet -->
+    <script defer src="sell.js"></script>  <!-- Link to the JavaScript file -->
+</head>
+<body>
+    <h1>Sell a Book</h1>
+    <form id="sellForm">
+        <label for="title">Book Title:</label><br>
+        <input type="text" id="title" name="title" required><br>
+      
+        <label for="author">Author:</label><br>
+        <input type="text" id="author" name="author" required><br>
+      
+        <label for="price">Price (₹):</label><br>
+        <input type="number" id="price" name="price" required><br>
+      
+        <label for="rating">Rating:</label><br>
+        <input type="number" id="rating" name="rating" step="0.1" max="5" min="1" required><br>
+      
+        <label for="image">Image URL:</label><br>
+        <input type="text" id="image" name="image" required><br><br>
+      
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="box">
+        <!-- The new book products will be appended here -->
+    </div>
+</body>
+</html>

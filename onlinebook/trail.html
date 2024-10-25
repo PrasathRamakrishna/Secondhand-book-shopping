@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search</title>
+    <style>
+        /* Your existing CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .search input {
+            border-radius: 2px;
+            border: 1px solid black;
+            width: 100%;
+            height: 33px;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        .product {
+            width: 200px;
+            height: 250px;
+            margin: 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .product img {
+            border-radius: 5px;
+            height: 200px;
+            width: 150px;
+        }
+        .product small {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Book Search</h2>
+        <div class="search">
+            <input type="text" id="search-item" placeholder="Search for books..." onkeyup="search()">
+        </div>
+        <div id="box">
+            <!-- Example book items -->
+            <div class="product">
+                <img src="images/1984.jpg" alt="Book 1">
+                <small>Book One</small>
+            </div>
+            <div class="product">
+                <img src="images/abc.jpg" alt="Book 2">
+                <small>Book Two</small>
+            </div>
+            <div class="product">
+                <img src="images/alchemist.jpg" alt="Book 3">
+                <small>Book Three</small>
+            </div>
+        </div>
+    </div>
+    <script>
+        function search() {
+            const searchbox = document.getElementById('search-item').value.toUpperCase();
+            const products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                const textValue = product.querySelector('small').textContent || '';
+                if (textValue.toUpperCase().indexOf(searchbox) > -1) {
+                    product.style.display = '';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
